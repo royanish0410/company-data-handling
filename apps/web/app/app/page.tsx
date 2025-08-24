@@ -138,7 +138,7 @@ function Home() {
   );
 
   return (
-    <div className="container p-4 md:p-8 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="container p-4 md:p-8 min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -146,12 +146,12 @@ function Home() {
       >
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-10">
           <div className="w-full text-center md:text-left">
-            <h1 className="font-bold text-4xl md:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 text-center">
+            <h1 className="font-bold text-4xl md:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-center">
               Company Finder
             </h1>
           </div>
           <Link href="/addcompany" passHref>
-            <Button className="flex items-center gap-2 mt-4 md:mt-0 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white">
+            <Button className="flex items-center gap-2 mt-4 md:mt-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
               <FaPlus /> Add Company
             </Button>
           </Link>
@@ -249,7 +249,7 @@ function Home() {
           </div>
 
           <Button
-            className="col-span-full mt-4 w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all"
+            className="col-span-full mt-4 w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all"
             onClick={applyFilters}
           >
             Apply Filters
@@ -291,16 +291,16 @@ function Home() {
                 transition={{ duration: 0.3, delay: i * 0.05 }}
               >
                 <Card
-                  className="shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 hover:border-blue-200 h-full flex flex-col"
+                  className="shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100 hover:border-purple-200 h-full flex flex-col"
                 >
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-lg">
-                      <FaBuilding className="text-blue-500" /> {company.name}
+                      <FaBuilding className="text-purple-500" /> {company.name}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-gray-700 flex-grow">
                     <p className="flex items-center gap-2">
-                      <FaIndustry className="text-indigo-500" /> {company.industry}
+                      <FaIndustry className="text-pink-500" /> {company.industry}
                     </p>
                     <p className="flex items-center gap-2">
                       <FaMapMarkerAlt className="text-green-500" /> {company.location}
@@ -310,9 +310,9 @@ function Home() {
                         <FaUsers className="text-purple-500" /> Size: {company.size}
                       </p>
                     )}
-                    {company.foundedYear && <p className="text-sm">Founded: {company.foundedYear}</p>}
+                    {company.foundedYear && <p className="text-sm font-semi-bold">Founded: {company.foundedYear}</p>}
                     {company.domain && <p className="text-sm">Domain: {company.domain}</p>}
-                    {company.rating !== undefined && (
+                    {company.rating !== undefined &&  (
                       <p className="flex items-center gap-1 text-yellow-500">
                         <FaStar /> {company.rating}
                       </p>
@@ -335,7 +335,7 @@ function Home() {
 
         {/* Optional: Floating Add Button for Mobile */}
         <Link href="/addcompany" passHref>
-          <Button className="fixed bottom-6 right-6 z-50 w-12 h-12 p-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white md:hidden">
+          <Button className="fixed bottom-6 right-6 z-50 w-12 h-12 p-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white md:hidden">
             <FaPlus size={20} />
           </Button>
         </Link>
